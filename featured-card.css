@@ -1,0 +1,93 @@
+/* create code css for .fiturcardhead make the color list-style is pink */
+
+ul.fiturcardhead {
+  list-style: none;
+  padding-left: 1rem;
+  font-size: clamp(0.9375rem, 0.8886rem + 0.1449vw, 1.0625rem);
+}
+ul.fiturcardhead li {
+  margin-bottom: 6px;
+}
+
+ul.fiturcardhead li::before {
+  content: "\25A0";
+  color: var(--colpink);
+  margin-right: 5px;
+}
+
+/**
+=========================
+*NAME: featured Card Lengkap
+*=========================
+*/
+
+div#fitlengkapwr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+div.fitlengkap {
+  padding: 8px;
+}
+
+div.fitlengkap h3 {
+  font-size: var(--fontcustom1);
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  padding-left: 19px;
+}
+div.fitlengkap h3:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--colpink);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+#btninfeaturedwr {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+#btninfeaturedwr a {
+  display: block;
+  width: max-content;
+  padding: 8px 3rem;
+  background-color: var(--colpink);
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+/**
+=========================
+*NAME: Media Query
+*=========================
+*/
+@media (max-width: 714px) {
+  div#fitlengkapwr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 393px) {
+  div#fitlengkapwr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

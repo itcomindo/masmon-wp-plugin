@@ -1,0 +1,68 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+#testipr {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#testiwr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+#testileft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#testiright,
+#phonewr {
+  width: 100%;
+  overflow: hidden;
+}
+#phone {
+  width: 365px;
+  height: 725px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+img#phonecase {
+  width: 365px;
+  height: auto;
+  z-index: 5;
+}
+div#testiphotowr {
+  position: absolute;
+  width: calc(100% - 5rem);
+  top: 6.27rem;
+  left: 2.43rem;
+  background-color: #ede8df;
+  width: 18.2rem;
+}
+div#testiphoto {
+  width: 365px;
+  height: 528px;
+  overflow: hidden;
+}
+div.thetestimonial {
+  width: 100%;
+  height: 100%;
+}
+
+div.thetestimonial img {
+  width: 300px;
+  z-index: -1;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+div.thetestimonial.is-selected img {
+  transition-delay: 0.2s;
+  opacity: 1;
+}
